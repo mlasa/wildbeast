@@ -1,0 +1,44 @@
+body, p, h1, ul, li, blockquote{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: 'Vollkorn', Georgia, serif;
+    background:lightgray;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width:50px;
+}
+
+.container{
+    display:grid;
+
+    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    grid-template-areas:
+    "header header header",
+    "sidenav content ads",
+    "footer footer footer"
+    ;   
+}
+
+.header{
+    grid-area: header;
+}
+.sidenav{
+    grid-area: sidenav;
+}
+.content{
+    grid-area: content;
+}
+.ads{
+    grid-area: ads;
+}
+.footer{
+    grid-area: footer;
+}
